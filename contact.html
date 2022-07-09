@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="icon" href="images\Vastra-Logo.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FFE0FF;
+            padding-bottom: 100px;
+        }
+        
+        #contact {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin: 0 auto;
+            padding: 40px 0;
+            font: 300 60px 'Oswald', sans-serif;
+            color: black;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+        }
+        
+        .contact-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            max-width: 840px;
+        }
+        /* Left contact page */
+        
+        .form-horizontal {
+            float: left;
+            max-width: 400px;
+            font-family: 'Lato';
+            font-weight: 400;
+        }
+        
+        .form-control,
+        textarea {
+            max-width: 400px;
+            background-color: #fef9;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+        
+        .send-button {
+            margin-top: 15px;
+            height: 34px;
+            width: 400px;
+            overflow: hidden;
+            transition: all .2s ease-in-out;
+        }
+        
+        .alt-send-button {
+            width: 400px;
+            height: 34px;
+            transition: all .2s ease-in-out;
+        }
+        
+        .send-text {
+            display: block;
+            margin-top: 10px;
+            font: 700 12px 'Lato', sans-serif;
+            letter-spacing: 2px;
+        }
+        
+        .alt-send-button:hover {
+            transform: translate3d(0px, -29px, 0px);
+        }
+        /* Begin Right Contact Page */
+        
+        .direct-contact-container {
+            max-width: 400px;
+        }
+        /* Location, Phone, Email Section */
+        
+        .contact-list {
+            list-style-type: none;
+            margin-left: -30px;
+            padding-right: 20px;
+        }
+        
+        .list-item {
+            line-height: 4;
+            color: black;
+        }
+        
+        .contact-text {
+            font: 300 18px 'Lato', sans-serif;
+            letter-spacing: 1.9px;
+            color: black;
+        }
+        
+        .place {
+            margin-left: 62px;
+        }
+        
+        .phone {
+            margin-left: 56px;
+        }
+        
+        .gmail {
+            margin-left: 53px;
+        }
+        
+        .contact-text a {
+            color: black;
+            text-decoration: none;
+            transition-duration: 0.2s;
+        }
+        
+        .contact-text a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+        /* Social Media Icons */
+        
+        .social-media-list {
+            position: relative;
+            font-size: 22px;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        .social-media-list li a {
+            color: #fff;
+        }
+        
+        .social-media-list li {
+            position: relative;
+            display: inline-block;
+            height: 60px;
+            width: 60px;
+            margin: 10px 3px;
+            line-height: 60px;
+            border-radius: 50%;
+            color: #fff;
+            background-color: rgb(27, 27, 27);
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+        }
+        
+        .social-media-list li:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 50%;
+            opacity: 0;
+            box-shadow: 0 0 0 1px #fff;
+            transition: all .2s ease-in-out;
+        }
+        
+        .social-media-list li:hover {
+            background-color: #fff;
+        }
+        
+        .social-media-list li:hover:after {
+            opacity: 1;
+            transform: scale(1.12);
+            transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+        }
+        
+        .social-media-list li:hover a {
+            color: #000;
+        }
+        
+        .copyright {
+            font: 200 14px 'Oswald', sans-serif;
+            color: #555;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        
+        hr {
+            border-color: rgba(255, 255, 255, .6);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <a href="#" class="logo"><img src="images\logo.png"></a>
+
+        <nav class="middle-links">
+            <a href="index.html">home</a>
+            <a href="womens.html" target="_blank">women</a>
+            <a href="mens.html" target="_blank">men</a>
+            <a href="kids.html">kids</a>
+            <a href="contact.html">contact</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-bar" class="fas fa-bars"></div>
+            <div id="theme-toggler" class="fas fa-moon"></div>
+            <div class="fas fa-search" id="search-bar"></div>
+            <div class="fas fa-shopping-cart" id="shop-cart"></div>
+            <a href="user-login.html" target='_blank' class="fas fa-user"></a>
+        </div>
+
+        <div class="search-box">
+            <input type="search" placeholder="search here">
+        </div>
+
+        <div class="shopping-cart">
+            <div class="shopping-box">
+                <i class="fas fa-times"></i>
+                <img src="images/shirt1.png" alt="">
+                <div class="shop-content">
+                    <h3>White T-Shirt</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">X</span>
+                    <span class="multiply">₹2350</span>
+                </div>
+            </div>
+            <div class="shopping-box">
+                <i class="fas fa-times"></i>
+                <img src="images/shirt2.png" alt="">
+                <div class="shop-content">
+                    <h3>Black T-shirt</h3>
+                    <span class="quantity">2</span>
+                    <span class="multiply">X</span>
+                    <span class="multiply">₹3500</span>
+                </div>
+            </div>
+            <div class="shopping-box">
+                <i class="fas fa-times"></i>
+                <img src="images/shirt3.png" alt="">
+                <div class="shop-content">
+                    <h3>Classic Black</h3>
+                    <span class="quantity">3</span>
+                    <span class="multiply">X</span>
+                    <span class="multiply">₹4000</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="user">
+            <img src="images/user-img.png" alt="">
+            <h3>Kartikey Bhatia</h3>
+        </div>
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#category">Category</a>
+            <a href="#products">Products</a>
+            <a href="#featured">featured</a>
+            <a href="#deal">deal</a>
+            <a href="#review">review</a>
+        </div>
+        <div id="close" class="fas fa-times"></div>
+    </nav>
+
+    <section id="contact">
+
+        <h1 class="section-header">Contact</h1>
+
+        <div class="contact-wrapper">
+
+            <!-- Left contact page -->
+
+            <form id="contact-form" class="form-horizontal" role="form">
+
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+                    </div>
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+                    </div>
+                </div>
+                <br>
+                <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+                <br>
+
+                <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+              <div class="alt-send-button">
+                <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+              </div>
+            
+            </button>
+
+            </form>
+
+            <!-- Left contact page -->
+
+            <div class="direct-contact-container">
+
+                <ul class="contact-list">
+                    <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Delhi, Inia</span></i></li>
+
+                    <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">9818765432</a></span></i></li>
+
+                    <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">vastrashopping@gmail.com</a></span></i></li>
+
+                </ul>
+
+                <hr>
+
+                <hr>
+
+                <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="footer">
+
+        <div class="footer-container">
+        
+            <div class="box-container">
+        
+                <div class="box">
+                    <h3>quick links</h3>
+                    <a href="#">home</a>
+                    <a href="#">products</a>
+                    <a href="#">featured</a>
+                    <a href="#">deal</a>
+                    <a href="#">review</a>
+                </div>
+        
+                <div class="box">
+                    <h3>extra links</h3>
+                    <a href="#">my account</a>
+                    <a href="#">my favorite</a>
+                    <a href="#">my order</a>
+                    <a href="#">my cart</a>
+                </div>
+        
+                <div class="box">
+                    <h3>donwload links</h3>
+                    <a href="#">windows store</a>
+                    <a href="#">app store</a>
+                    <a href="#">google store</a>
+                </div>
+        
+                <div class="box">
+                    <h3>contact us</h3>
+                    <a href="#">+9815678345</a>
+                    <a href="#">vastrashopping@gmail.com</a>
+                    <a href="#">delhi, india - 110051</a>
+                    <img src="images/payment.png" alt="">
+                </div>
+        
+            </div>  
+        </div>
+        
+        </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
